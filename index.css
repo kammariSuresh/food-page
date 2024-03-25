@@ -10,10 +10,22 @@ body{
     min-height: 100vh;
     line-height: 30px;
     font-family: Montserrat, sans-serif;
+    /* font-family: var(--bs-font-sans-serif); */
     letter-spacing: 1.5px;
     -webkit-text-size-adjust: 100%;
+    background: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: #444;
 }
-
+h1{
+    font-family: Libre Baskerville, serif;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-size: 6rem;
+    line-height: 6rem;
+}
 nav{
     background-color: white;
 
@@ -44,9 +56,10 @@ ul{
     flex-direction: column;
 }
 .time-number{
-    font-size: 500%;
+    /* font-size: 500%; */
     font-weight: bold;
-    
+    font-size: 3rem;
+    line-height: 3rem;
 
 }
 
@@ -64,25 +77,59 @@ ul{
     outline: none;
     padding: 2%;
 }
+.nav-image{
+    width: 20%;
+}
+a{
+    color: #fff;
+}
 
-.images-hovers:hover{
+.nav-item{
+    width: 10%;
+}
+/* .images-hovers{
+    width: 50%;
+} */
+
+/* .images-hovers:hover{
     background-color: rgb(189, 189, 199);
     transition: all .3s ease 0s;
+    content: "Product Title";
+} */
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
-.productSingle {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    height: 100%;
+.images-hovers {
+    transition: transform 0.3s ease;
     width: 100%;
-    background: #777;
-    opacity: 0;
-    -webkit-transition: all .3s ease 0s;
-    transition: all .3s ease 0s;
+    height: 100%;
 }
+
+.image-container:hover .images-hovers {
+    transform: scale(1);
+}
+
+.middle {
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    color: #fff;
+    transform: translate(-20%, -20%);
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+}
+
+.image-container:hover .middle {
+    opacity: 0.8;
+}
+
+
 
 .main-container{
     display: flex;
