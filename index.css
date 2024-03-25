@@ -51,13 +51,14 @@ ul{
     transition: all .3s ease 0s;
     
 }
-.class-span{
+/* .class-span{
     display: flex;
     flex-direction: column;
-}
+} */
 .time-number{
     /* font-size: 500%; */
-    font-weight: bold;
+    font-weight: 900;
+    opacity: 0.8;
     font-size: 3rem;
     line-height: 3rem;
 
@@ -83,19 +84,18 @@ ul{
 a{
     color: #fff;
 }
+.para-heading{
+    font-size: medium;
+}
+.comming-soon{
+    font-weight: bold;   
+    color: #444; 
+}
 
 .nav-item{
     width: 10%;
 }
-/* .images-hovers{
-    width: 50%;
-} */
 
-/* .images-hovers:hover{
-    background-color: rgb(189, 189, 199);
-    transition: all .3s ease 0s;
-    content: "Product Title";
-} */
 
 .image-container {
     position: relative;
