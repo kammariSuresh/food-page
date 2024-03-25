@@ -1,48 +1,94 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="index.css" >
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Your website description goes here.">
+      <meta name="keywords" content="keyword1, keyword2, keyword3">
+      <meta name="author" content="Your Name">
+      <title>Your Page Title</title>        
+      <link rel="stylesheet" href="index.css" >
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    </head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      </head>
 <body>
 
 <div class="bg-container">
-    <nav class="container-fluid">
-        <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Feed Back</a>
-            </li>
-          </ul>
-    </nav>
-    <header class="header-container ">
-        <div>
-            <h1>Order Food </h1>
-            <button>Order Now</button>
-            <button>Add To Cart</button>
+
+  <div class="menu-icon">
+    <i class="bi bi-list"></i>
+  </div>
+  <div class="main-container">
+      <section class="first-section p-3">
+        <nav class="container-fluid d-flex justify-content-between mb-4">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ8AAAApCAYAAAAriPuIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDphZGY0ZmEwNS1lYjE2LWY5NDktYjUxMC00MWQwODllYzZiY2IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEVDODEzMTE5NEJBMTFFOUE0RjVCNzAxODIzNkZFMEYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEVDODEzMTA5NEJBMTFFOUE0RjVCNzAxODIzNkZFMEYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjExMWNiZmZhLTkyN2ItZDI0YS04YTYxLTBhZmE3NWNhYmRmNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDphZGY0ZmEwNS1lYjE2LWY5NDktYjUxMC00MWQwODllYzZiY2IiLz4gPC9y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" alt="logo" />
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <!-- <img src="https://rectoon.itech-theme.com/www.facebook.com" alt="facebook"/> -->
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-twitter"></i>
+                    <!-- <img src="https://rectoon.itech-theme.com/www.twitter.com" alt="twitter" /> -->
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <!-- <img src="https://rectoon.itech-theme.com/www.twitter.com" alt="twitter" /> -->
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-linkedin"></i>               
+                    <!-- <img src="https://rectoon.itech-theme.com/www.twitter.com" alt="twitter" /> -->
+                  </a>
+                </li>
+              </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <h1>COMING SOON</h1>
+            <div class="container-fluid d-flex mb-4">
+              <div class="d-flex row">
+                <span class="time-number">00:</span>
+                <span>HOUR</span>
+              </div>
+              <div class="d-flex row">
+                <span  class="time-number">00:</span>
+                <span>MIN</span>
+              </div>
+              <div  class="d-flex row">
+                <span class="time-number">00</span>
+                <span>SEC</span>
+              </div>
+              
+            
+            </div>
+
+            <h2 class="mb-5">NEWS LETTER</h2>
+            <p class="mb-5">Lorem ipsum dolor armet , consectetur adipisicing elit. </p>
+            <button type="email" class="button-element mb-5 p-2 d-flex align-items-center justify-content-between">
+              <span>Enter your email </span>
+
+              <i class="bi bi-arrow-right"></i>
+            </button>
+
+            <button class="contat-btn mb-5">Contact Us</button>
         </div>
-    </header>
+      </section>
 
-    <section>
-        <div class="container d-flex flex-wrap">
-            <img width="100px" height="100px" class="m-2" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1705859118/samples/dessert-on-a-plate.jpg" />
-            <img width="100px" height="100px" class="m-2" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1705859114/samples/breakfast.jpg" alt="Food" />
-            <img width="100px" height="100px" class="m-2" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1705859118/samples/dessert-on-a-plate.jpg" />
-            <img width="100px" height="100px" class="m-2" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1705859118/samples/dessert-on-a-plate.jpg" />
-            <img width="100px" height="100px" class="m-2" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1705859118/samples/dessert-on-a-plate.jpg" />
-            <img width="100px" height="100px" class="m-2" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1705859118/samples/dessert-on-a-plate.jpg" />
-        </div>
-    </section>
+    <section class="second-section d-flex flex-wrap p-3">
+        <img class="images-hovers col-sm-12  col-md-6 p-2" width="50%"  src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/1.e3247f8a_pseatn.jpg" />
+        <img class="images-hovers col-sm-12  col-md-6 p-2" width="50%" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353025/2.f24f65f5_gtigdg.jpg" />
+        <img class="images-hovers  col-sm-12 col-md-6  p-2" width="50%" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/3.cf65e6b6_oshxc3.jpg" />
+        <img class="images-hovers col-sm-12 col-md-6 p-2" width="50%" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353023/4.4ebc5599_zooa0r.jpg" />
+      </section>
 
-
+    </div>
 </div>
 
 </body>
