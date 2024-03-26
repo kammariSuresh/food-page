@@ -4,42 +4,63 @@
 }
 .chooseDemoWrapper{
     display: flex;
+    justify-content: space-between;
+    
+    
+
+}
+.menu-icon{
+    position: fixed;
+    right: 1rem;
+    top: 19%;
+    z-index: 1;
+    /* border: 0px solid #dbd7d7; */
+    /* background-color: white; */
 }
 .closer{
     cursor: pointer;
-    background-color: #ffffff;
+    position: relative;
     display: block;
     height: 40px;
     width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    margin-right: 10px;
 }
 
 .list {
     display: none;
+    background-color: white;
+    height: 140px;
+    width: 180px;
+    /* padding: 10px; */
 }
 
 .chooseDemo{
     color: #444;
     text-decoration: none;
+    padding: 5px;
 }
 .chooseDemo:hover{
     color: #444;
+    background-color: #cecdcde1;
+    
 }
+.icon-close{
+    display: none;
+}
+
   
 .show-list {
     display: block; 
-    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 10px;
   }
-  
-  
-  
-  
-    
+     
 body{
     width: 100%;
     max-width: 100vw;
@@ -64,17 +85,9 @@ ul{
 }
 
 .bg-container{
-
     position: relative;
 }
-.menu-icon{
-    position: fixed;
-    right: 1rem;
-    top: 19%;
-    z-index: 1;
-    border: 0px solid #dbd7d7;
-    background-color: white;
-}
+
 
 .time-number{
     font-weight: 900;
@@ -205,8 +218,13 @@ a{
         height: 100%;
 
     }
-    
     .second-section{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .image-container{
         width: 50%;
     }
 }
@@ -217,7 +235,6 @@ a{
 
     }
     .button-element{
-        
         width: 50%;
         height: 60px;
         
@@ -225,26 +242,36 @@ a{
     
     .second-section{
         width: 100%;
-
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .image-container{
+        width: 50%;
     }
     .main-container{
         display: flex;
         flex-direction: column;
     }
 }
-
-@media screen and (max-width: 576px) {
-    .time-number{
-        font-size: 250%;
-    
+@media screen and (max-width: 749px) {
+    .button-element{
+        width: 90%;
     }
+}
+@media screen and (max-width: 501px) {
+    
     .nav-image{
         height: min-content;
         align-self: center;
     }
     .second-section{
         width: 100%;
-
+        display: flex;
+        flex-direction: column;
+    }
+    .image-container{
+        width: 100%;
     }
     .button-element{
         background-color: rgba(42, 41, 41, 0.886);
