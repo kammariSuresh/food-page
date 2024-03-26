@@ -321,11 +321,9 @@ a{
         width: 100%;
     }
     .button-element{
-        color: #ffffff;
-        outline: none;
-        width: 90%;
+      
+        width: 80%;
         height: 60px;
-        border: none;
     }
     
     .colon{
