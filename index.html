@@ -13,17 +13,20 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous">
       <script>
         document.addEventListener('DOMContentLoaded', function () {
-  const closer = document.querySelector('.closer');
-  const list = document.querySelector('.list');
-
-  // Function to toggle the list visibility
-  function toggleList() {
-    list.classList.toggle('show-list'); // Toggle the 'show-list' class on the list
-  }
-
-  // Event listener for closer element click
-  closer.addEventListener('click', toggleList);
-});
+        const closer = document.querySelector('.closer');
+        const list = document.querySelector('.list');
+        const iconClose = document.querySelector(".icon-close");
+        const iconMenu = document.querySelector(".icon-menu");
+    
+        function toggleList() {
+          list.classList.toggle('show-list');
+          iconMenu.style.display = iconMenu.style.display === 'none' ? 'block' : 'none';
+          iconClose.style.display = iconClose.style.display === 'block' ? 'none' : 'block';
+          
+        }
+        
+        closer.addEventListener('click', toggleList);
+      });
 
       </script>
       </head>
@@ -32,12 +35,11 @@
 <div class="bg-container">
 
   <div class="menu-icon">
-    <!-- <button type="button" class="btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="right popover"> -->
-      <!-- <i class="bi bi-list"></i> -->
       
       <div class="chooseDemoWrapper">
-        <div class="closer ecm">
-          <span><i class="bi bi-list"></i></span>
+        <div class="closer">
+          <i class="icon-menu bi bi-list"></i>
+          <i class="icon-close bi bi-x-lg"></i>
         </div>
         <div class="list">
           <a aria-current="page" class="chooseDemo ecm active" href="/">Ecommerce Version</a>
@@ -45,7 +47,6 @@
           <a class="chooseDemo ecm" href="/dark">Dark Version</a>
         </div>
       </div>
-    <!-- </button> -->
   </div>
   <div class="main-container">
       <section class="first-section p-3">
@@ -114,7 +115,7 @@
         </div>
       </section>
 
-      <section class="second-section d-sm-flex flex-wrap p-3">
+      <!-- <section class="second-section  d-sm-flex flex-wrap p-3">
         <div class="image-container col-xs-6 col-sm-6 p-2">
             <img class="images-hovers " src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/1.e3247f8a_pseatn.jpg" />
             <div class="middle">
@@ -141,8 +142,36 @@
                 <div class="text">PRODUCT TITLE</div>
             </div>
         </div>
-    </section>
-    
+    </section> -->
+
+    <section class="second-section p-3">
+      <div class="image-container p-2">
+          <img class="images-hovers " src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/1.e3247f8a_pseatn.jpg" />
+          <div class="middle">
+              <div class="text">
+                PRODUCT TITLE
+              </div>
+          </div>
+      </div>
+      <div class="image-container p-2">
+          <img class="images-hovers" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353025/2.f24f65f5_gtigdg.jpg" />
+          <div class="middle">
+              <div class="text">PRODUCT TITLE</div>
+          </div>
+      </div>
+      <div class="image-container p-2">
+          <img class="images-hovers" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/3.cf65e6b6_oshxc3.jpg" />
+          <div class="middle">
+              <div class="text">PRODUCT TITLE</div>
+          </div>
+      </div>
+      <div class="image-container p-2">
+          <img class="images-hovers" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353023/4.4ebc5599_zooa0r.jpg" />
+          <div class="middle">
+              <div class="text">PRODUCT TITLE</div>
+          </div>
+      </div>
+  </section>
 
     </div>
 </div>
