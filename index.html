@@ -10,17 +10,42 @@
       <link rel="stylesheet" href="index.css" >
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous">
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  const closer = document.querySelector('.closer');
+  const list = document.querySelector('.list');
+
+  // Function to toggle the list visibility
+  function toggleList() {
+    list.classList.toggle('show-list'); // Toggle the 'show-list' class on the list
+  }
+
+  // Event listener for closer element click
+  closer.addEventListener('click', toggleList);
+});
+
+      </script>
       </head>
 <body>
 
 <div class="bg-container">
 
   <div class="menu-icon">
-    
-    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
-      <i class="bi bi-list"></i>
-    </button>
-    
+    <!-- <button type="button" class="btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="right popover"> -->
+      <!-- <i class="bi bi-list"></i> -->
+      
+      <div class="chooseDemoWrapper">
+        <div class="closer ecm">
+          <span><i class="bi bi-list"></i></span>
+        </div>
+        <div class="list">
+          <a aria-current="page" class="chooseDemo ecm active" href="/">Ecommerce Version</a>
+          <a class="chooseDemo ecm" href="/ico">Ico Version</a>
+          <a class="chooseDemo ecm" href="/dark">Dark Version</a>
+        </div>
+      </div>
+    <!-- </button> -->
   </div>
   <div class="main-container">
       <section class="first-section p-3">
@@ -29,22 +54,22 @@
             <ul class="nav">
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <i class="bi bi-facebook logos"></i>
+                    <i class="bi bi-facebook custom-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-twitter  custom-icon"></i>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <i class="bi bi-twitter logos"></i>
+                    <i class="bi bi-instagram   custom-icon"></i>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <i class="bi bi-instagram logos"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-linkedin logos"></i>               
+                    <i class="bi bi-linkedin  custom-icon"></i>               
                   </a>
                 </li>
               </ul>
@@ -53,15 +78,19 @@
         <div class="container-fluid">
             <h1 class="comming-soon mb-2">COMING SOON</h1>
             <div class="container-fluid d-flex mb-5">
-              <div class="d-flex row">
-                <span class="time-number">00:</span>
+              <div class="d-flex flex-column">
+                <span class="time-number d-flex flex-row text-center">00 
+                  <span class="colon">:</span>
+                </span>
                 <span>HOUR</span>
               </div>
-              <div class="d-flex row">
-                <span  class="time-number">00:</span>
+              <div class="d-flex flex-column">
+                <span class="time-number d-flex flex-row text-center">00 
+                  <span class="colon">:</span>
+                </span>
                 <span>MIN</span>
               </div>
-              <div  class="d-flex row">
+              <div  class="d-flex flex-column">
                 <span class="time-number">00</span>
                 <span>SEC</span>
               </div>
@@ -69,48 +98,44 @@
             
             </div>
 
-            <h2 class="mb-5 mt-5 para-heading">NEWS LETTER</h2>
-            <p class="mb-5 ">Lorem ipsum dolor armet , consectetur adipisicing elit. <wbr>Accusantium dolors dolorbus ducimus est incidunt iste.</wbr> </p>
-            <button type="email" class="button-element mb-5 p-2 d-flex align-items-center justify-content-between">
-              <span>Enter your email </span>
+            <h2 class="mb-3 mt-5 para-heading">NEWS LETTER</h2>
+            <p class="mb-5 ">Lorem ipsum dolor armet , consectetur adipisicing elit. <br>Accusantium dolors dolorbus ducimus est incidunt iste. </p>
+            <div class="mb-5 button-hover">
+            <button type="email" class="button-element p-2 d-flex align-items-center justify-content-between">
+              <div class="p-2 your-mail">Enter your email </div>
 
-              <i class="bi bi-arrow-right"></i>
+              <div class="arraw"><i class="bi bi-arrow-right"></i></div>
+              
             </button>
-
+            <p class="valid-email">Please give a valid email</p>
+          </div>
+            
             <button class="contat-btn mb-5">Contact Us</button>
         </div>
       </section>
 
-    <!-- <section class="second-section d-flex flex-wrap p-3">
-        <img class="images-hovers col-sm-6  col-md-6 p-2"  src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/1.e3247f8a_pseatn.jpg" />
-        <img class="images-hovers col-sm-6  col-md-6 p-2" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353025/2.f24f65f5_gtigdg.jpg" />
-        <img class="images-hovers  col-sm-6 col-md-6  p-2"  src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/3.cf65e6b6_oshxc3.jpg" />
-        <img class="images-hovers col-sm-6 col-md-6 p-2"  src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353023/4.4ebc5599_zooa0r.jpg" />
-       <div class="middle">
-          <div class="text">PRODUCT Title</div>
-        </div>
-      </section> -->
-
       <section class="second-section d-sm-flex flex-wrap p-3">
-        <div class="image-container col-sm-6 col-md-6 p-2">
+        <div class="image-container col-xs-6 col-sm-6 p-2">
             <img class="images-hovers " src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/1.e3247f8a_pseatn.jpg" />
             <div class="middle">
-                <div class="text">PRODUCT TITLE</div>
+                <div class="text">
+                  PRODUCT TITLE
+                </div>
             </div>
         </div>
-        <div class="image-container col-sm-6 col-md-6 p-2">
+        <div class="image-container col-xs-6 col-sm-6 p-2">
             <img class="images-hovers" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353025/2.f24f65f5_gtigdg.jpg" />
             <div class="middle">
                 <div class="text">PRODUCT TITLE</div>
             </div>
         </div>
-        <div class="image-container  col-sm-6 col-md-6 p-2">
+        <div class="image-container  col-xs-6 col-sm-6 p-2">
             <img class="images-hovers" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353024/3.cf65e6b6_oshxc3.jpg" />
             <div class="middle">
                 <div class="text">PRODUCT TITLE</div>
             </div>
         </div>
-        <div class="image-container  col-sm-6 col-md-6 p-2">
+        <div class="image-container  col-xs-6 col-sm-6 p-2">
             <img class="images-hovers" src="https://res.cloudinary.com/djnaxt4mz/image/upload/v1711353023/4.4ebc5599_zooa0r.jpg" />
             <div class="middle">
                 <div class="text">PRODUCT TITLE</div>
