@@ -321,7 +321,8 @@ a{
         width: 100%;
     }
     .button-element{
-        background-color: rgba(42, 41, 41, 0.886);
+    
+        background-color: rgba(23, 22, 22, 0.886)
         color: #ffffff;
         outline: none;
         width: 90%;
