@@ -91,18 +91,16 @@
 
             <h2 class="mb-4 mt-5 para-heading">NEWS LETTER</h2>
             <p class="mb-4 paragraph ">Lorem ipsum dolor armet , consectetur adipisicing elit. <br>Accusantium dolors dolorbus ducimus est incidunt iste.</p>
-            <div class="mb-4 d-flex">
-            <input type="email" placeholder="Enter your email" class="button-element p-2"/>
-              <!-- <div class="p-2 your-mail">Enter your email </div> -->
-              <button class="arrow ">
+           <div class="mb-1 d-flex">
+            <input name="Email" id="emailInput" type="email" placeholder="Enter your email" class="button-element p-2"/>
+              
+              <button class="arrow" onclick="functionGettingEmail()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" fill="currentColor" class="element bi bi-arrow-right" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                 </svg>
               </button>
-
-<!--             <p class="valid-email">Please give a valid email</p> -->
           </div>
-            
+          <p id="paragraph1" class="valid-email mb-4">Please give a valid email</p>
             <button class="contact-btn mb-5">Contact Us</button>
         </div>
       </section>
@@ -194,6 +192,18 @@ console.log(hoursElement)
 }
 setInterval(updateTimer, 1000);
 updateTimer();
+
+ const functionGettingEmail = () => {
+    const inputElement = document.getElementById('emailInput');
+    const paragraphElement = document.getElementById('paragraph1');
+    if (inputElement.value.trim() === '') {
+      paragraphElement.style.visibility = 'visible';
+
+    } else {
+      paragraphElement.style.visibility = 'hidden';
+      // paragraphElement.textContent = inputElement.value;
+    }
+  }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
