@@ -231,7 +231,7 @@ a{
     color: black; 
   }
 .valid-email{
-    display: none;
+    visibility: hidden;
 }
 .your-mail{
     color: #c7bebe;
